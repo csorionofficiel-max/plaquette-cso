@@ -4,158 +4,96 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plaquette CS ORION</title>
+    
+    <!-- Balises Meta pour le partage sur les réseaux sociaux -->
+    <meta name="description" content="CS ORION - Le football, une passion familiale depuis 1933. Découvrez notre histoire, nos entraînements et rejoignez notre club.">
+    
+    <!-- Open Graph (Facebook, WhatsApp, LinkedIn) -->
+    <meta property="og:title" content="CS ORION - Football Club">
+    <meta property="og:description" content="Le football, une passion familiale depuis 1933. Découvrez notre histoire et nos entraînements.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://csorionofficiel-max.github.io/plaquette-cso/logo-cso.jpg">
+    <meta property="og:url" content="https://csorionofficiel-max.github.io/plaquette-cso/">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="CS ORION - Football Club">
+    <meta name="twitter:description" content="Le football, une passion familiale depuis 1933.">
+    <meta name="twitter:image" content="https://csorionofficiel-max.github.io/plaquette-cso/logo-cso.jpg">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap');
         body { font-family: 'Inter', sans-serif; }
-        .bg-bordeaux { background-color: #7f1d1d; }
-        .text-bordeaux { color: #7f1d1d; }
-        .border-bordeaux { border-color: #7f1d1d; }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-900">
 
-    <header class="bg-bordeaux text-white py-16 px-6 relative overflow-hidden">
-        <div class="absolute inset-0 bg-white opacity-5 rotate-3 transform scale-150"></div>
-        <div class="relative z-10 max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
-            
-            <!-- Slot Logo Gauche (Très Grand) -->
-            <div class="w-64 h-64 bg-white/20 rounded-full flex items-center justify-center cursor-pointer hover:bg-white/30 transition-all border-4 border-dashed border-white/50" onclick="document.getElementById('logoInputL').click()">
-                <input type="file" id="logoInputL" class="hidden" accept="image/*" onchange="previewImage(event, 'logoImgL')">
-                <img id="logoImgL" src="https://placehold.co/400x400/7f1d1d/ffffff?text=LOGO+CLUB" class="w-full h-full rounded-full object-cover">
+    <header class="bg-gray-800 text-white py-12 px-6">
+        <div class="max-w-4xl mx-auto flex flex-col items-center text-center">
+            <div class="w-48 h-48 mb-6 overflow-hidden rounded-full border-4 border-white shadow-lg">
+                <img src="logo-cso.jpg" alt="Logo CS ORION" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://placehold.co/400x400?text=LOGO';">
             </div>
-
-            <div class="text-center flex-1 px-4">
-                <span class="inline-block py-1 px-3 bg-white text-red-900 font-bold text-xs uppercase tracking-widest rounded-full mb-4">Fondé en 1933</span>
-                <h1 class="text-5xl md:text-7xl font-black mb-2 tracking-tighter">CS ORION</h1>
-                <p class="text-xl text-red-100 font-light italic">Le football, une passion familiale</p>
-            </div>
-
-            <!-- Slot Logo Droite (Très Grand) -->
-            <div class="w-64 h-64 bg-white/20 rounded-full flex items-center justify-center cursor-pointer hover:bg-white/30 transition-all border-4 border-dashed border-white/50" onclick="document.getElementById('logoInputR').click()">
-                <input type="file" id="logoInputR" class="hidden" accept="image/*" onchange="previewImage(event, 'logoImgR')">
-                <img id="logoImgR" src="https://placehold.co/400x400/7f1d1d/ffffff?text=LOGO+CLUB" class="w-full h-full rounded-full object-cover">
-            </div>
+            <h1 class="text-5xl font-black mb-2 tracking-tighter">CS ORION</h1>
+            <p class="text-xl text-gray-300 font-light italic">Le football, une passion familiale depuis 1933</p>
         </div>
     </header>
 
-    <main class="max-w-5xl mx-auto px-6 py-12">
+    <main class="max-w-4xl mx-auto px-6 py-12">
         
         <!-- Histoire -->
-        <section class="mb-16">
-            <div class="bg-white p-8 md:p-12 rounded-3xl shadow-xl border border-gray-100 relative">
-                <h2 class="text-3xl font-bold mb-6 text-bordeaux">Notre Histoire & ADN</h2>
-                <p class="text-lg text-gray-700 leading-relaxed">
-                    Depuis <strong>1933</strong>, le CS ORION écrit son histoire sur les terrains. Bien plus qu'un simple club amateur, nous sommes une institution ancrée dans notre ville. Ici, la transmission, l'apprentissage et le plaisir du jeu sont les moteurs qui font battre le cœur de notre famille. Chaque joueur, chaque bénévole est un maillon essentiel de notre réussite collective.
-                </p>
-            </div>
+        <section class="mb-12 bg-white p-8 rounded-2xl shadow-md border border-gray-100">
+            <h2 class="text-2xl font-bold mb-4 text-gray-800 border-l-4 border-gray-800 pl-4">Notre Histoire & ADN</h2>
+            <p class="text-gray-700 leading-relaxed">Depuis 1933, le CS ORION écrit son histoire sur les terrains. Bien plus qu'un simple club amateur, nous sommes une institution ancrée dans notre ville. Ici, la transmission, l'apprentissage et le plaisir du jeu sont les moteurs qui font battre le cœur de notre famille. Chaque joueur, chaque bénévole est un maillon essentiel de notre réussite collective.</p>
         </section>
 
         <!-- Mot du Président -->
-        <section class="mb-16 bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-gray-100 grid md:grid-cols-4 gap-8 items-center">
-            <!-- Slot Photo Président -->
-            <div class="md:col-span-1 relative group cursor-pointer" onclick="document.getElementById('presidentInput').click()">
-                <input type="file" id="presidentInput" class="hidden" accept="image/*" onchange="previewImage(event, 'presidentImg')">
-                <img id="presidentImg" src="https://placehold.co/400x500/eee/7f1d1d?text=Cliquez+pour+Photo" alt="Président" class="rounded-2xl w-full h-auto shadow-md object-cover aspect-[4/5]">
-                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
-                    <span class="bg-black/70 text-white px-4 py-2 rounded-lg text-sm font-bold shadow-lg">📸 Ajouter Photo</span>
-                </div>
-            </div>
-            
-            <div class="md:col-span-3">
-                <h2 class="text-3xl font-bold mb-6 text-bordeaux">Le mot du Président</h2>
-                <p class="text-gray-700 italic leading-relaxed text-lg">
-                    "Rejoindre le CS ORION, c'est intégrer bien plus qu'un club de football : c'est entrer dans une famille. Depuis 1933, notre mission reste intacte : permettre à chacun, du plus petit au plus grand, de s'épanouir dans la performance, le respect et la convivialité. Ensemble, continuons à faire rayonner nos couleurs avec passion."
-                </p>
-                <p class="mt-6 font-black text-bordeaux">— Le Président du CS ORION</p>
+        <section class="mb-12 bg-white p-8 rounded-2xl shadow-md border border-gray-100 grid md:grid-cols-2 gap-8 items-center">
+            <img src="president.jpg" alt="Président" class="rounded-2xl shadow-md w-full h-64 object-cover">
+            <div>
+                <h2 class="text-2xl font-bold mb-4 text-gray-800">Le mot du Président</h2>
+                <p class="text-gray-700 italic leading-relaxed">"Rejoindre le CS ORION, c'est intégrer bien plus qu'un club de football : c'est entrer dans une famille. Depuis 1933, notre mission reste intacte : permettre à chacun, du plus petit au plus grand, de s'épanouir dans la performance, le respect et la convivialité. Ensemble, continuons à faire rayonner nos couleurs avec passion."</p>
             </div>
         </section>
 
-        <!-- Terrain -->
-        <section class="mb-16 bg-gray-900 text-white rounded-3xl p-8 md:p-12">
-            <h2 class="text-3xl font-bold mb-10 text-white">Le Terrain & Horaires</h2>
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div class="space-y-4">
-                    <div class="flex items-center justify-between border-b border-gray-700 pb-3">
-                        <span class="font-bold text-red-500">U7 / U9</span>
-                        <span class="text-gray-300 text-sm">Mer. 10h00 - 11h30</span>
-                    </div>
-                    <div class="flex items-center justify-between border-b border-gray-700 pb-3">
-                        <span class="font-bold text-red-500">U10 / U11 / U12 / U13</span>
-                        <span class="text-gray-300 text-sm">Lun. 18h-19h30 / Mer. 17h-18h30</span>
-                    </div>
-                    <div class="flex items-center justify-between border-b border-gray-700 pb-3">
-                        <span class="font-bold text-red-500">Seniors</span>
-                        <span class="text-gray-300 text-sm">Mer. 19h-20h30 / Ven. 19h-20h30</span>
-                    </div>
+        <!-- Terrain & Horaires -->
+        <section class="mb-12 bg-gray-900 text-white p-8 rounded-2xl shadow-xl">
+            <h2 class="text-2xl font-bold mb-6 text-white">Terrain & Entraînements</h2>
+            <img src="stade.jpg" alt="Stade" class="rounded-xl w-full h-64 object-cover mb-6">
+            <div class="grid md:grid-cols-2 gap-4">
+                <div class="bg-white/10 p-4 rounded-lg">
+                    <p class="font-bold text-yellow-500">École de Foot (U7 / U9)</p>
+                    <p class="text-sm">Mercredi : 10h00 - 11h30</p>
                 </div>
-                <!-- Slot Photo Stade -->
-                <div class="cursor-pointer group relative" onclick="document.getElementById('stadeInput').click()">
-                    <input type="file" id="stadeInput" class="hidden" accept="image/*" onchange="previewImage(event, 'stadeImg')">
-                    <img id="stadeImg" src="https://placehold.co/600x300/eee/7f1d1d?text=Cliquez+pour+ajouter+photo+Stade" class="rounded-2xl w-full h-auto shadow-lg object-cover">
-                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/40 rounded-2xl">
-                        <span class="text-white font-bold">Modifier Photo Stade</span>
-                    </div>
-                    <p class="text-sm italic mt-2 text-gray-400 text-center">Stade Municipal - Séance d'essai gratuite disponible</p>
+                <div class="bg-white/10 p-4 rounded-lg">
+                    <p class="font-bold text-yellow-500">Pré-Formation (U10 à U13)</p>
+                    <p class="text-sm">Lundi 18h / Mercredi 17h</p>
+                </div>
+                <div class="bg-white/10 p-4 rounded-lg">
+                    <p class="font-bold text-yellow-500">Seniors</p>
+                    <p class="text-sm">Mercredi & Vendredi : 19h00</p>
                 </div>
             </div>
         </section>
-
+        
         <!-- Partenaires -->
-        <section class="mb-16">
-            <div class="bg-gradient-to-br from-red-950 to-red-900 rounded-3xl p-10 text-white shadow-2xl">
-                <div class="max-w-3xl mx-auto text-center">
-                    <h2 class="text-4xl font-bold mb-6">Devenez Partenaire du CS ORION</h2>
-                    <p class="text-red-200 mb-10 text-lg">
-                        Associez votre entreprise aux valeurs de performance, de mixité et de convivialité qui animent notre club historique depuis 1933.
-                    </p>
-                    
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10 text-sm">
-                        <div class="bg-white/5 p-4 rounded-xl border border-white/10">
-                            <span class="block text-xl font-bold text-yellow-500 mb-2">Visibilité</span>
-                            <span class="text-red-100">Une communauté grandissante et engagée sur nos réseaux sociaux.</span>
-                        </div>
-                        <div class="bg-white/5 p-4 rounded-xl border border-white/10">
-                            <span class="block text-xl font-bold text-yellow-500 mb-2">Image</span>
-                            <span class="text-red-100">Valorisez votre marque auprès d'un club ancré localement.</span>
-                        </div>
-                        <div class="bg-white/5 p-4 rounded-xl border border-white/10">
-                            <span class="block text-xl font-bold text-yellow-500 mb-2">Échanges</span>
-                            <span class="text-red-100">Rejoignez un réseau de partenaires engagés.</span>
-                        </div>
-                    </div>
-
-                    <a href="mailto:csorion.officiel@gmail.com" class="inline-block bg-yellow-500 text-red-950 font-black py-4 px-10 rounded-full hover:bg-yellow-400 transition-all shadow-lg hover:scale-105">
-                        Nous Contacter pour le Sponsoring
-                    </a>
-                </div>
+        <section class="mb-16 bg-gradient-to-r from-gray-800 to-black text-white p-10 rounded-3xl text-center shadow-2xl">
+            <h2 class="text-4xl font-bold mb-6">Devenez Partenaire</h2>
+            <p class="text-gray-300 mb-8 max-w-2xl mx-auto">Associez votre image à un club historique. Plus qu'un sponsoring, investissez dans un engagement local fort et vecteur de liens.</p>
+            <div class="grid md:grid-cols-3 gap-6 mb-8 text-sm">
+                <div class="border border-white/20 p-4 rounded-xl"><strong>Visibilité</strong><br>Touchez notre communauté</div>
+                <div class="border border-white/20 p-4 rounded-xl"><strong>Image</strong><br>Véhiculez des valeurs fortes</div>
+                <div class="border border-white/20 p-4 rounded-xl"><strong>Réseau</strong><br>Échangez avec nos acteurs</div>
             </div>
+            <a href="mailto:csorion.officiel@gmail.com" class="inline-block bg-white text-gray-900 font-black py-4 px-10 rounded-full hover:bg-gray-200 transition-all transform hover:scale-105 shadow-xl">
+                Demander notre dossier
+            </a>
         </section>
     </main>
 
-    <footer class="bg-gray-100 py-12 px-6 text-center border-t border-gray-200">
-        <h3 class="font-bold text-xl mb-6 text-bordeaux">Rejoignez l'aventure CS ORION</h3>
-        <div class="flex justify-center gap-8 mb-8 text-bordeaux font-bold text-lg flex-wrap">
-            <a href="mailto:csorion.officiel@gmail.com" class="hover:underline flex items-center gap-2">📧 csorion.officiel@gmail.com</a>
-        </div>
-        <div class="flex justify-center gap-6 text-bordeaux text-2xl font-bold">
-            <a href="#" class="hover:scale-110 transition-transform">Instagram</a>
-            <a href="#" class="hover:scale-110 transition-transform">Facebook</a>
-            <a href="#" class="hover:scale-110 transition-transform">Snapchat</a>
-        </div>
+    <footer class="bg-gray-100 py-12 text-center text-gray-600">
+        <p>© 2026 CS ORION - Tous droits réservés</p>
     </footer>
 
-    <script>
-        function previewImage(event, targetId) {
-            const input = event.target;
-            if (input.files && input.files[0]) {
-                const reader = new FileReader();
-                reader.onload = function(e) {
-                    document.getElementById(targetId).src = e.target.result;
-                };
-                reader.readAsDataURL(input.files[0]);
-            }
-        }
-    </script>
 </body>
 </html>
